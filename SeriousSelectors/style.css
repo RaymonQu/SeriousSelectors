@@ -44,10 +44,25 @@ differently from number 4. This will center and underline
 the text underneath the boa-rd(the area currently 
 filled with red images). */
 
-div+p{
+div~p{
   text-align: center;
   text-decoration: underline;
 }
+
+p + p{
+  font-family:'Courier New', Courier, monospace;
+  color: cornflowerblue;
+  text-align: center;
+  text-decoration: underline;
+  margin-right: 400px;
+  margin-left: 400px;
+  font-weight: 900;
+}
+
+P::first-letter{
+  font-size: xx-large;
+}
+
 
 /* Selector_6: select all image elements that have a parent 
 that is a div. When this selector is correct, 
@@ -111,6 +126,10 @@ to specify what the parent must be.*/
   background-color: black;
 }
 
+#board >:nth-child(3n + 3){
+  background-color: magenta;
+}
+
 /* 
 Selector_10: select all image elements when you hover
 your mouse over them AND all of the elements selected
@@ -129,6 +148,13 @@ div > img:hover, div > div > div:hover{
   border: solid yellow thin;
 }
 
+.bestPlayer{
+  width: 400px;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
 /* ## Extensions
 Now that your board is looking great and you've become a css selector master, here are some extensions to keep improving your page! 
 1. Add and change style rules so that the background of the board alternates between three different colors. (For example, a white cell, then a black cell, then a purple cell repeated across the entire board).
